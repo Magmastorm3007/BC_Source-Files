@@ -1,0 +1,373 @@
+<html>
+
+<head>
+<title>Page1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.mySlides {display:none;}
+p{
+   top: auto;
+font-size:48px;
+font-family: 'Concert One', cursive;
+text-align:center;
+color:rgb(255, 255, 129);
+ text-shadow: 10px 10px 10px red;
+ text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+
+}
+p7{
+  top: auto;
+font-size:48px;
+font-family: 'Concert One', cursive;
+text-align:center;
+color:rgb(153, 153, 140);
+text-shadow: 10px 10px 10px red;
+text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+
+}
+body{
+ background-image: url('BG.jpg');
+ z-index: -2;
+}
+p1{
+    font-family: 'Concert One', cursive;
+
+}
+.container {
+    position: relative;
+    text-align: center;
+    }
+    .container1{
+      position: relative;
+      text-align: center;
+      }
+    .centered {
+        font-size: 20px;
+        font-family: 'Concert One', cursive;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -15%);
+    }
+    .carousel-container {
+        width: 600px;
+        height: 400px;
+        position: relative;
+        margin: 0 auto;
+        z-index: auto;
+      }
+    img{
+    right: 40%;
+}
+figure { 
+    display: block; 
+    position: relative; 
+    overflow: hidden; 
+  }
+  
+  figcaption { 
+    position: absolute; 
+    background: rgba(0,0,0,0.75); 
+    color: white; 
+    padding: 10px 20px; 
+  }
+figcaption { 
+    position: absolute; 
+    background: rgba(0,0,0,0.75); 
+    color: white; 
+    padding: 10px 20px; 
+  
+    opacity: 0;
+    bottom: 0; 
+  
+    
+    
+  }
+  
+  figure:hover figcaption {
+    opacity: 1;
+    left: 0;
+  }
+cap{
+font-family:Verdana, Geneva, Tahoma, sans-serif
+
+}
+cap1{font-family: 'Concert One', cursive;
+    text-align:center;
+    color:rgb(204, 204, 24);
+     text-shadow: 10px 10px 10px red;
+     text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+
+
+}
+.tab {
+  overflow: hidden;
+  
+  
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: white;
+  float: left;
+  border:medium;
+  outline: medium;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+
+  border-top: none;
+}
+button1 {   
+  background-color: #4CAF50;   
+  width: 100%;  
+   color: orange;   
+   padding: 15px;   
+   margin: 10px 0px;   
+   border: none;   
+   cursor: pointer;   
+    }   
+form {   
+   border: 3px solid #f1f1f1;   
+}   
+input[type=text], input[type=password] {   
+  width: 25%;   
+  margin: 8px 2px;  
+  padding: 12px 20px;   
+  display: inline-block;   
+  border: 2px solid green;   
+  box-sizing: border-box;   
+}  
+.cancelbtn {   
+  width: auto;   
+  padding: 10px 18px;  
+  margin: 10px 5px;  
+}   
+  
+
+.contain {   
+  padding: 25px;   
+  background-color: lightblue;  
+}   
+</style>
+</head>
+
+<body>
+
+<p>Beyond Cheese</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="opentab(event, 'Homepage')">Homepage</button>
+  <button class="tablinks" onclick="opentab(event, 'AboutUs')">AboutUs</button>
+  <button class="tablinks" onclick="opentab(event, 'Login')">Login</button>
+</div>
+
+<div id="Login" class="tabcontent">
+
+
+
+  <center> <h1><p7> Customer Login</p7> </h1> </center>   
+  <form>  
+      <div class="contain">   
+
+        
+          <label>Username : </label>   
+          <input type="text" placeholder="Enter Username" name="username" required>
+   
+          <label>Password : </label>   
+        <input type="password" placeholder="Enter Password" name="password" required> 
+         <br>
+          <button type="submit">Login</button>
+            
+          <input type="checkbox" checked="checked"> Remember me   
+          <button type="button1" class="cancelbtn"> Cancel</button>   
+          Forgot <a href="#"> password? </a>   
+      </div>   
+  </form>     
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div id="AboutUs" class="tabcontent">
+    
+
+  <div class='container'>
+    <img src="wbd.jpg" width="1280"" height="680" >
+
+  <div class="centered">
+    <p> About Us</p>
+    <p1><b>Beyond Cheese Company is an artisan producer located in Delhi. We hand craft every batch of cheese using only the best milk available to us from small local dairies. We place the highest value in the relationships we have with our farmers as they are the backbone to our cheese's success. The craft of making artisan cheese is an age old tradition that we strive to pay homage to with every batch we make <br>
+    <br>
+  </p1>
+  </b>
+</div>
+  
+
+</div>
+  
+
+
+
+</div>
+<div id="Homepage" class="tabcontent">
+
+<div class='container'>
+    <img src="wbd.jpg" width="1280" height="860" >
+
+
+
+
+    <div class='centered'>
+  
+
+
+
+
+
+
+
+
+      <b><p1>Cheese is a dairy product, derived from milk and produced in wide ranges of flavors, textures and 
+forms by coagulation of the milk protein casein. It comprises proteins and fat from milk, usually the milk of cows,
+ buffalo, goats, or sheep. During production, the milk is usually acidified and the enzymes of
+rennet (or bacterial enzymes with similar activity) are added to cause the milk proteins (casein) to coagulate.<br>
+
+
+
+
+<br>
+
+
+
+
+
+<cap1> Our Selection of Popular Cheeses </cap1></b></p1>
+<div class="w3-content w3-section" style="max-width:480px">
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <figure>
+  <img class="mySlides" src="ched.jpg" style="width:100%">
+  <figcaption>cheddar</figcaption>
+  </figure> 
+  <figure>
+  <img class="mySlides" class="adjust" src="mozz.jpg" style="width:100%">
+  <figcaption>mozzerella</figcaption>
+</figure>
+
+<b><p1>We offer you high quality  handcrafted artisan cheese  undergoing Strict Quality Checks delivered to your doorstep
+  Order now to  support our great initiative to make the local cheese industry prosper with your help     .<br>
+  
+  
+  
+  
+  <br>
+  
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+ 
+       
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+
+
+function opentab(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+window.onload = opentab(event,"Homepage");
+
+
+
+
+
+</script>
+
+</body>
+</html>

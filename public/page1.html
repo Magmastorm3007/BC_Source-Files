@@ -1,0 +1,132 @@
+<html>
+
+<head>
+<title>Page1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+
+<body>
+
+<p>Beyond Cheese</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="opentab(event, 'Homepage')">Homepage</button>
+  <button class="tablinks" onclick="opentab(event, 'AboutUs')">AboutUs</button>
+  <button class="tablinks" onclick="opentab(event, 'Tokyo')">Tokyo</button>
+</div>
+
+
+<div class='container'>
+    <img src="wbd.jpg" width="1510" height="720" >
+<div class='centered'>
+  <div id="Homepage" class="tabcontent"></div>  
+<b><p1>Cheese is a dairy product, derived from milk and produced in wide ranges of flavors, textures and 
+forms by coagulation of the milk protein casein. It comprises proteins and fat from milk, usually the milk of cows,
+ buffalo, goats, or sheep. During production, the milk is usually acidified and the enzymes of
+rennet (or bacterial enzymes with similar activity) are added to cause the milk proteins (casein) to coagulate.<br>
+<br>
+
+<cap1> Our Selection of Popular Cheeses </cap1></b></p1>
+<div class="w3-content w3-section" style="max-width:480px">
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <figure>
+  <img class="mySlides" src="ched.jpg" style="width:100%">
+  <figcaption>cheddar</figcaption>
+  </figure> 
+  <figure>
+  <img class="mySlides" class="adjust" src="mozz.jpg" style="width:100%">
+  <figcaption>mozzerella</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="AboutUs" class="tabcontent">
+
+  <b><p1>Cheese is a dairy product, derived from milk and produced in wide ranges of flavors, textures and 
+    forms by coagulation of the milk protein casein. It comprises proteins and fat from milk, usually the milk of cows,
+     buffalo, goats, or sheep. During production, the milk is usually acidified and the enzymes of
+    rennet (or bacterial enzymes with similar activity) are added to cause the milk proteins (casein) to coagulate.<br>
+    <br></p1>
+  </b>
+
+
+
+
+  
+
+
+
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+
+
+function opentab(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
