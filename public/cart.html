@@ -18,7 +18,7 @@
 <div class="title">Cheddar</div>
  <div>
   <label>Weight in Grams:</label>
-  <select onchange="calculateAmount(this.value)">
+  <select id="k" onchange="calculateAmountone(this.value)">
     <option>0</option>
   <option>200</option>
   <option>500</option>
@@ -26,7 +26,7 @@
   </select>
 </div>
 <p>Price:</p>
-<input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly><br>
+<input class="w3-input w3-border" name="tot_amount" id="tot_amount1" type="text" readonly><br>
 <button onclick="Add(item)">Add to Cart</button>
 </div>
 
@@ -35,14 +35,14 @@
 <div class="title">Mozzerella</div>
 <div>
 <label>Weight in Grams:</label>
-<select onchange="calculateAmount(this.value)">
+<select onchange="calculateAmounttwo(this.value)">
   <option>0</option>
 <option>200</option>
 <option>500</option>
 <option>850</option>
 </select>
 </div> <p>Price:</p>
-<input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly><br>
+<input class="w3-input w3-border" name="tot_amount" id="tot_amount2" type="text" readonly><br>
 <button onclick="Add(item2)">Add to Cart</button>
 
 </div>
@@ -51,6 +51,8 @@
 
 <div class="cart" id="cart">
   <div class="title">Cart</div>
+  <p>Total Price</p>
+  <input class="w3-input w3-border" name="tot_amount" id="tot_amount3" type="text" readonly><br><br>
   <div id="title"></div>
 </div>
 
@@ -127,9 +129,10 @@ width: 200px;
 
 
 <script>
-
-
-
+var mylist=new Array();
+var totprice=0;
+var divobj = document.getElementById('tot_amount3');
+                divobj.value = totprice;
   var additemid=0;
   function Add(item){
     additemid++;
@@ -140,6 +143,9 @@ width: 200px;
 img.setAttribute('src',item.children[0].currentSrc);
 var title=document.createElement('div');
 title.innerText=item.children[2].innerText;
+var price=document.createElement('div');
+price.innerText=" Price"+ item.children[5].value;
+mylist[additemid]=parseInt(item.children[5].value);
 /*
 var label=document.createElement('div');
 label.innerText=item.children[2].children[0].innerText;
@@ -158,21 +164,37 @@ del.setAttribute('onclick','del('+additemid+')')
 selecteditemid.append(img);
 selecteditemid.append(label);
 selecteditemid.append(title);
+selecteditemid.append(price);
 selecteditemid.append(del);
 
  var cartitem=document.getElementById('title')
- 
+ if(item.children[5].value&&item.children[5].value!=0){
  cartitem.append(selecteditemid);
+ totprice+=parseInt(item.children[5].value)
+ divobj.value = totprice;
+ }
   }
   function del(item){
- 
- document.getElementById(item).remove();
+totprice=totprice-mylist[item];
+ divobj.value=totprice;
+
+remove(item);
+// document.getElementById(item).remove();
+
 }
-  
-function calculateAmount(val) {
+  function remove(item){
+    document.getElementById(item).remove();
+  }
+function calculateAmountone(val) {
                 var tot_price = val * 2;
                 /*display the result*/
-                var divobj = document.getElementById('tot_amount');
+                var divobj = document.getElementById('tot_amount1');
+                divobj.value = tot_price;
+            }
+            function calculateAmounttwo(val) {
+                var tot_price = val * 2;
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount2');
                 divobj.value = tot_price;
             }
   </script>
